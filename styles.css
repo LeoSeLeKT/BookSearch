@@ -1,0 +1,53 @@
+/* BEM Methodology Example */
+header{
+    text-align: center;
+}
+.search {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+.search__bar {
+    width: 70%;
+    padding: 0.5em;
+}
+.search__button {
+    padding: 0.5em;
+}
+.sort {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.book-item {
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.book-item__title, .book-item__author, .book-item__genre {
+    margin: 0.5em 0;
+}
+.no-results {
+    color: red;
+    font-size: 1.2em;
+    text-align: center;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search__bar, .search__button {
+        width: 100%;
+    }
+    .book-item {
+        width: 90%;
+    }
+}
