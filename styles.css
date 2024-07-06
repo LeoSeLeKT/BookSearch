@@ -11,22 +11,26 @@ body {
     justify-content: center;
     text-align: center;
 }
+
 header {
     text-align: center;
     margin-bottom: 1em;
 }
+
 .search {
     margin: 1em 0;
     display: flex;
     justify-content: center;
     gap: 0.5em;
 }
+
 .search__bar {
     width: 100%;
     padding: 0.5em;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
+
 .search__button {
     padding: 0.5em;
     border: 1px solid #ccc;
@@ -34,12 +38,14 @@ header {
     cursor: pointer;
     background-color: #e6e6e6;
 }
+
 .sort {
     margin: 1em 0;
     display: flex;
     justify-content: center;
     gap: 0.5em;
 }
+
 .book-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -48,21 +54,26 @@ header {
     padding: 0 1em;
     box-sizing: border-box;
 }
+
 .book-item {
     border: 1px solid #ccc;
     padding: 1.5em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     background-color: #fffaf0;
     border-radius: 10px;
+    margin: 0.5em;  /* Added margin for spacing */
 }
+
 .book-item__title, .book-item__author, .book-item__genre {
     margin: 0.5em 0;
 }
+
 .no-results {
     color: red;
     font-size: 1.2em;
     text-align: center;
 }
+
 @media (max-width: 600px) {
     .book-list {
         grid-template-columns: repeat(2, 1fr);
@@ -75,5 +86,6 @@ header {
 
     .book-item {
         width: 100%;
+        margin: 0.5em 0; 
     }
 }
