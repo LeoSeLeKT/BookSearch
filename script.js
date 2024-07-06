@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sortOptions.addEventListener('change', sortBooks);
     //for enter
     searchBar.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' || event.key === 'done' || event.key=='return') {
             searchBooks();
         }
     });
