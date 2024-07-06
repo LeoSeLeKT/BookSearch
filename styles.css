@@ -67,7 +67,7 @@ header {
     font-size: 1.2em;
     text-align: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .book-list {
         grid-template-columns: 1fr;
     }
