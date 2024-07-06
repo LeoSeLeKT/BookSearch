@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('search-button');
     const sortOptions = document.getElementById('sort-options');
     const bookList = document.getElementById('book-list');
-
     let books = [
         { id: 1, title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction" },
         { id: 2, title: "1984", author: "George Orwell", genre: "Dystopian" },
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 9, title: "Ulysses", author: "James Joyce", genre: "Modernist" },
         { id: 10, title: "The Odyssey", author: "Homer", genre: "Epic" }
     ];
-
     const displayBooks = (filteredBooks = books) => {
         bookList.innerHTML = '';
 
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             bookList.innerHTML = '<p class="no-results">No results found</p>';
             return;
         }
-
         filteredBooks.forEach(book => {
             const bookItem = document.createElement('div');
             bookItem.className = 'book-item';
@@ -39,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             bookList.appendChild(bookItem);
         });
     };
-
     const highlightMatch = (text) => {
         const query = searchBar.value.toLowerCase();
         if (!query) return text;
@@ -47,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const regex = new RegExp(`(${query})`, 'gi');
         return text.replace(regex, '<span style="font-weight: bold; color: red;">$1</span>');
     };
-
     const searchBooks = () => {
         const query = searchBar.value.toLowerCase();
         const filteredBooks = books.filter(book =>
@@ -55,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
             book.author.toLowerCase().includes(query) ||
             book.genre.toLowerCase().includes(query)
         );
-
         displayBooks(filteredBooks);
     };
-
     const sortBooks = () => {
         const sortBy = sortOptions.value;
         books.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
@@ -67,7 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchButton.addEventListener('click', searchBooks);
     sortOptions.addEventListener('change', sortBooks);
-
-    // Initial display
+    //for enter
+    searchBar.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            searchBooks();
+        }
+    });
     sortBooks();
 });
