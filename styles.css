@@ -65,12 +65,15 @@ header {
 }
 @media (max-width: 600px) {
     .book-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
+
     .search__bar, .search__button {
         width: 100%;
     }
+
     .book-item {
-        width:100%;
+        width: 100%;
     }
 }
