@@ -76,7 +76,6 @@ header {
 
 @media (max-width: 600px) {
     .book-list {
-        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
 
