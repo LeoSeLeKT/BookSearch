@@ -68,6 +68,9 @@ header {
     text-align: center;
 }
 @media (max-width: 768px) {
+    body{
+        align-items: center;
+        }
     .book-list {
         grid-template-columns: 1fr;
     }
