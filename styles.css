@@ -76,7 +76,8 @@ header {
     flex-direction: column;
     align-items: center;
     background-position: center;
-    margin: 0;
+    margin: auto;
+    padding: auto;
     min-height: 100vh;
     justify-content: center;
     text-align: center;
