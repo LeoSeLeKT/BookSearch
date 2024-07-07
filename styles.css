@@ -42,7 +42,7 @@ header {
 }
 .book-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-columns: repeat(2, 1fr);*/
     gap: 1em;
     width: 100%;
     max-width: 600px;
@@ -67,24 +67,22 @@ header {
     font-size: 1.2em;
     text-align: center;
 }
-@media () {
+@media{
     body{
-            font-family: 'Arial', sans-serif;
-    background-color: #f5f5dc;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-position: center;
-    margin: auto;
-    padding: auto;
-    min-height: 100vh;
-    justify-content: center;
-    text-align: center;
-        }
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f5dc;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-position: center;
+        margin: auto;
+        min-height: 100vh;
+        justify-content: center;
+        text-align: center;
+    }
     .book-list {
-        grid-template-columns: 1fr;
-        grid-template-columns: repeat(2, 1fr);
+      /*grid-template-columns: repeat(2, 1fr);*/
     }
     .search__bar, .search__button {
         width: 100%;
