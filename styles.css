@@ -67,7 +67,7 @@ header {
     font-size: 1.2em;
     text-align: center;
 }
-@media{
+@media (){
     body{
         font-family: 'Arial', sans-serif;
         background-color: #f5f5dc;
