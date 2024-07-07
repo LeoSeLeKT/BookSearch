@@ -50,6 +50,9 @@ header {
     box-sizing: border-box;
     justify-content: center;
     margin: auto;
+    min-height: 50vh;
+    align-items: center;
+    text-align: center;
 }
 
 .book-item {
@@ -66,9 +69,12 @@ header {
     color: red;
     font-size: 1.2em;
     text-align: center;
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
 }
-@media (){
-    body{
+@media () {
+    body {
         font-family: 'Arial', sans-serif;
         background-color: #f5f5dc;
         color: #000;
@@ -82,12 +88,12 @@ header {
         text-align: center;
     }
     .book-list {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .search__bar, .search__button {
         width: 100%;
     }
     .book-item {
-        width:100%;
+        width: 100%;
     }
 }
